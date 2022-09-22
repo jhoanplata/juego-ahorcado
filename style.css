@@ -1,0 +1,282 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: #e5e5e5;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  justify-content: left;
+  margin: 40px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn_inicio {
+  background-color: #0a3871;
+  width: 350px;
+  color: #fff;
+  border: none;
+  padding: 30px;
+  border-radius: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 140px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.btn_inicio:hover {
+  transform: scale(1.1);
+  transition: 0.4s;
+  background: #fff;
+  color: #0a3871;
+}
+
+.btn_palabra {
+  color: #0a3871;
+  border: none;
+  width: 280px;
+  padding: 25px;
+  border-radius: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 30px 0;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.btn_palabra:hover {
+  transform: scale(1.1);
+  transition: 0.4s;
+  background: #0a3871;
+  color: #fff;
+}
+
+.text_area{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+.input_Text {
+  width: 500px;
+  height: 250px;
+  font-size: 32px;
+  line-height: 48px;
+  color: #0a3871;
+  background-color: transparent;
+  resize: none; /*sirve para que no se pueda redimensionar el textarea*/
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+}
+
+.advertencia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  line-height: 18px;
+  color: #495057;
+  margin-right: 260px;
+}
+
+.ahorcado_img {
+  display: none;
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.diseno_canva{
+  justify-content: center;
+  align-items: center;
+}
+
+.mesage_container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* display: flex; */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  
+}
+.mesage{
+  background: #fff;
+  width: 50%;
+  height: 400px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+
+
+
+.botones {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.boton1 , .botones_1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn1 , .btn2 {
+  margin: 0 20px;
+}
+
+.btn1_1 , .btn2_1 {
+  margin: 0 20px;
+}
+
+.nuevo_juego ,.guardar {
+  background-color: #0a3871;
+  width: 200px;
+  color: #fff;
+  border: none;
+  padding: 30px;
+  border-radius: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.nuevo_juego:hover {
+  transform: scale(1.1);
+  transition: 0.4s;
+  background: #fff;
+  color: #0a3871;
+}
+.guardar:hover {
+  transform: scale(1.1);
+  transition: 0.4s;
+  background: #fff;
+  color: #0a3871;
+}
+
+.desistir, .cancelar {
+  color: #0a3871;
+  border: none;
+  width: 200px;
+  padding: 30px;
+  border-radius: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.desistir:hover {
+  transform: scale(1.1);
+  transition: 0.4s;
+  background: #0a3871;
+  color: #fff;
+}
+.cancelar:hover {
+  transform: scale(1.1);
+  transition: 0.4s;
+  background: #0a3871;
+  color: #fff;
+}
+
+footer .redes-sociales {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+
+footer .redes-sociales a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: #000;
+  color: #fff;
+  margin: 20px;
+  text-align: center;
+  border-radius: 100px;
+  transition: 0.3s ease all;
+}
+
+/* footer .redes-sociales */
+footer .redes-sociales .github {
+  background: #0a3871;
+}
+footer .redes-sociales .linkedin {
+  background: #0a3871;
+}
+
+footer .redes-sociales a i {
+  font-size: 20px;
+  line-height: 50px;
+}
+
+footer .contenedor-icono:hover a {
+  animation: icono 0.5s ease;
+}
+
+/* animaciones de los iconos de las  redes sociales */
+@keyframes icono {
+  from {
+    transform: rotate3d(0, 0, 0, 0);
+  }
+  to {
+    transform: rotate3d(0, 1, 0, 360deg);
+    -webkit-transform: rotate3d(0, 1, 0, 360deg);
+    -moz-transform: rotate3d(0, 1, 0, 360deg);
+    -ms-transform: rotate3d(0, 1, 0, 360deg);
+    -o-transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
+
+footer .creado-por {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #0a3871;
+}
+
+footer .creado-por a {
+  color: #0a3871;
+  margin-bottom: 20px;
+}
+footer .creado-por a:hover {
+  text-decoration: underline;
+}

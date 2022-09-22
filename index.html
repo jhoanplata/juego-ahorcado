@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorcado</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="./img/Vector.png" alt="logo">
+        </div>
+    </header>
+
+    <div class="container" id="desaparece">
+        <div class="botones1">
+            <button class="btn_inicio" id="iniciar_juego" onclick="iniciarJuego()">Iniciar juego</button>
+        </div>
+        <div class="botones2">
+            <button class="btn_palabra" id="nueva_palabra" onclick="nuevaPalabra()">Agregar nueva palabra </button>
+        </div>
+    </div>
+
+    <div class="text_area" id="text_Area">
+
+        <textarea class="input_Text" id="inputText" cols="40" rows="10" placeholder="Ingrese la palabra aquí"
+            autofocus></textarea>
+        <p class="advertencia"> <i class="fas fa-exclamation-circle"></i>Maximo 8 palabras.
+        </p>
+        <div class="boton1">
+            <div class="btn1">
+                <button class="guardar" onclick="guardaPalabra()"> Guardar </button>
+            </div>
+            <div class="btn2">
+                <button class="cancelar" onclick="regresarInicio()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="mesage_container" id="mesage_container">
+        <div class="mesage" id="mesage">
+            <h2 id="final_mesage"></h2>
+            <h3 id="final_mesage_revelado"></h3>
+            <div class="botones_1">
+                <div class="btn1_1">
+                    <button class="nuevo_juego" onclick="nuevoJuego()"> Nuevo juego</button>
+                </div>
+                <div class="btn2_1">
+                    <button class="desistir" onclick="regresarInicio()">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ahorcado_img" id="ahorcado_img">
+        <canvas id="diseno_canva" height="500px" width="1200px" class="diseno_canva">
+
+        </canvas>
+        <div class="botones">
+            <div class="btn1">
+                <button class="nuevo_juego" onclick="nuevoJuego()"> Nuevo juego</button>
+            </div>
+            <div class="btn2">
+                <button class="desistir" onclick="regresarInicio()">Desistir</button>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="contenedor" id="footer_redes">
+        <div class="redes-sociales">
+            <div class="contenedor-icono">
+                <a href="https://github.com/jhoanplata" target="_blank" class="github">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <div class="contenedor-icono">
+                <a href="https://www.linkedin.com/in/jhosepro/" target="_blank" class="linkedin">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+        <div class="creado-por">
+            <p>Sitio diseñado por Jhoan Plata </p>
+            <p> Reto Alura Latam 2022 <i class="fas fa-copyright"></i></p>
+        </div>
+    </footer>
+</body>
+<script src="script.js"></script>
+<script src="canvas.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+</html>
