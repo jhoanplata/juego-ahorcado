@@ -99,12 +99,19 @@ body {
 }
 
 .ahorcado_img {
+  width: 70%;
   display: none;
   /* display: flex; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+}
+
+.contenedor_ahorcado{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .diseno_canva{
@@ -140,8 +147,6 @@ body {
 .botones {
   padding-top: 20px;
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 
@@ -280,3 +285,53 @@ footer .creado-por a {
 footer .creado-por a:hover {
   text-decoration: underline;
 }
+
+@media only screen and (max-width: 768px) {
+  .ahorcado_img {
+    width: 60%;
+  }
+
+  .mesage{
+    width: 70%;
+  }
+  .input_Text {
+    width: 430px;
+  }
+
+  .advertencia{
+    margin-right: 310px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .ahorcado_img {
+    width: 60%;
+  }
+
+  .mesage{
+    width: 90%;
+  }
+
+  .nuevo_juego{
+    width: 150px;
+    padding: 15px;
+  }
+
+  .desistir{
+    width: 150px;
+    padding: 30px;
+  }
+
+  .guardar , .cancelar{
+    width: 150px;
+  }
+
+  .advertencia{
+    margin-right: 215px;
+  }
+
+  .input_Text{
+    width: 340px;
+  }
+}
+

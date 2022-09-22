@@ -83,6 +83,7 @@ function iniciarJuego() {
     document.getElementById("nueva_palabra").style.display = "none";
     document.getElementById("footer_redes").style.display = "none";
     document.getElementById("ahorcado_img").style.display = "flex"; //muestra el canvas
+    document.getElementById("contenedor_ahorcado").style.display = "flex";
     document.addEventListener("keydown", teclado);
     escojepalabra()
     dibujaAhorcado()
@@ -98,6 +99,8 @@ function regresarInicio() {
     document.getElementById("ahorcado_img").style.display = "none"; //oculta el canvas
     document.getElementById("text_Area").style.display = "none";
     document.getElementById("mesage_container").style.display = "none";
+    document.getElementById("contenedor_ahorcado").style.display = "none";
+
 }
 
 function nuevoJuego() {
@@ -105,6 +108,7 @@ function nuevoJuego() {
     document.getElementById("nueva_palabra").style.display = "none";
     document.getElementById("footer_redes").style.display = "none";
     document.getElementById("ahorcado_img").style.display = "flex";
+    document.getElementById("contenedor_ahorcado").style.display = "flex";
     document.getElementById("mesage_container").style.display = "none";
     escojepalabra()
     dibujaAhorcado()
@@ -133,6 +137,7 @@ function perdiste() {
     document.getElementById("nueva_palabra").style.display = "none";
     document.getElementById("footer_redes").style.display = "none";
     document.getElementById("ahorcado_img").style.display = "none";
+    document.getElementById("contenedor_ahorcado").style.display = "none";
     document.getElementById("mesage_container").style.display = "flex";
     document.getElementById("final_mesage").innerHTML = "Perdiste. 😭 ";
     document.getElementById("final_mesage").style.color = "red";
@@ -153,6 +158,7 @@ function ganaste() {
         document.getElementById("footer_redes").style.display = "none";
         document.getElementById("ahorcado_img").style.display = "none";
         document.getElementById("mesage_container").style.display = "flex";
+        document.getElementById("contenedor_ahorcado").style.display = "none";
         document.getElementById("final_mesage").innerHTML = "Ganaste. 😎 ";
         document.getElementById("final_mesage").style.color = "green";
         document.getElementById("final_mesage").style.fontSize = "45px";
