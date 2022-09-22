@@ -2,6 +2,10 @@
 
 <img src="/img/portada.png" alt="portada"/>
 
+---
+
+<img src="/img/juego.png" alt="juego"/>
+
 ## 👨🏽‍💻 ¿En qué consiste?
 
 Construir una pagina web que permita poder jugar al ahorcado, en el cual debemos adivinar la palabra y tenemos 7 intentos para ello.
