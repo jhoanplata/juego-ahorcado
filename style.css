@@ -142,7 +142,9 @@ body {
   align-items: center; 
 }
 
-
+#final_mesage_revelado{
+  font-size: 35px;
+ }
 
 .botones {
   padding-top: 20px;
@@ -308,9 +310,22 @@ footer .creado-por a:hover {
     width: 60%;
   }
 
+  .diseno_canva{
+    width: 700px;
+    margin-right: 45px;
+  }
+
   .mesage{
     width: 90%;
   }
+
+  .btn1_1 , .btn2_1 {
+    margin: 0 10px;
+  }
+
+ #final_mesage_revelado{
+  font-size: 25px;
+ }
 
   .nuevo_juego{
     width: 150px;

@@ -16,7 +16,6 @@ function teclado(evento) {
     if (/[^A-ZÑ]/.test(letra)) {
         return
     }
-    console.log(letra);
     if (palabrasecreta.includes(letra)) {
         indicarLetras(letra);
     } else {
@@ -24,6 +23,28 @@ function teclado(evento) {
     }
 
 }
+
+// function clickLetra(event) {
+//     let letrabtn = event.target;
+//     letrabtn.disabled = true;
+//     tecleado = letrabtn.innerHTML;
+//     console.log(letrabtn);
+//     if (palabrasecreta.includes(tecleado)) {
+//         indicarLetras(tecleado);
+//     }
+//     else {
+//         indicarMalas(tecleado);
+//     }
+// }
+
+// function teclado_mobile(eve) {
+//     let tecleado = document.querySelectorAll(".teclado_pantalla button");
+    
+//     for (let i = 0; i < tecleado.length; i++) {
+//         tecleado[i].addEventListener("click", clickLetra);
+//     }
+// }
+
 let correctas = [];
 let palabra_mala = [];
 function indicarLetras(correcta) {
@@ -101,6 +122,7 @@ function regresarInicio() {
     document.getElementById("mesage_container").style.display = "none";
     document.getElementById("contenedor_ahorcado").style.display = "none";
 
+
 }
 
 function nuevoJuego() {
@@ -129,9 +151,6 @@ function nuevaPalabra() {
     inputText.value = ""
 }
 
-
-
-
 function perdiste() {
     document.getElementById("iniciar_juego").style.display = "none";
     document.getElementById("nueva_palabra").style.display = "none";
@@ -143,14 +162,14 @@ function perdiste() {
     document.getElementById("final_mesage").style.color = "red";
     document.getElementById("final_mesage").style.fontSize = "45px";
     document.getElementById("final_mesage_revelado").innerHTML = "La palabra era: " + palabrasecreta;
-    document.getElementById("final_mesage_revelado").style.fontSize = "35px";
+
 
 }
 
 function ganaste() {
 
     let letra_correcta = JSON.stringify(correctas);
-    let letra_mala = JSON.stringify(palabra_mala);
+    let letra_mala = JSON.stringify(palabra_mala); 
     if (letra_correcta.length == letra_mala.length) {
         console.log("ganaste");
         document.getElementById("iniciar_juego").style.display = "none";
@@ -198,7 +217,3 @@ function guardaPalabra() {
     }
 
 }
-
-
-
-
