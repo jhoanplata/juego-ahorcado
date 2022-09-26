@@ -6,7 +6,6 @@ let palabrasecreta = "";
 
 function escojepalabra() {
     palabrasecreta = palabras[Math.floor(Math.random() * palabras.length)];
-    console.log(palabrasecreta);
     return palabrasecreta;
 }
 
@@ -23,27 +22,6 @@ function teclado(evento) {
     }
 
 }
-
-// function clickLetra(event) {
-//     let letrabtn = event.target;
-//     letrabtn.disabled = true;
-//     tecleado = letrabtn.innerHTML;
-//     console.log(letrabtn);
-//     if (palabrasecreta.includes(tecleado)) {
-//         indicarLetras(tecleado);
-//     }
-//     else {
-//         indicarMalas(tecleado);
-//     }
-// }
-
-// function teclado_mobile(eve) {
-//     let tecleado = document.querySelectorAll(".teclado_pantalla button");
-    
-//     for (let i = 0; i < tecleado.length; i++) {
-//         tecleado[i].addEventListener("click", clickLetra);
-//     }
-// }
 
 let correctas = [];
 let palabra_mala = [];
