@@ -9,6 +9,31 @@ function escojepalabra() {
     return palabrasecreta;
 }
 
+
+let letras = document.querySelectorAll(".alfabeto button");
+for (let i = 0; i < letras.length; i++) {
+    letras[i].addEventListener("click", tactil);
+}
+function tactil(evento){
+    const boton = evento.target;
+    boton.disabled = true;
+    const letra = boton.innerHTML;
+    if (palabrasecreta.includes(letra)) {
+        indicarLetras(letra);
+    } else {
+        indicarMalas(letra);
+    }
+
+}
+
+function reset_Tactil() {
+    for (let i = 0; i < letras.length; i++) {
+        letras[i].disabled = false;
+    }
+}
+
+
+
 function teclado(evento) {
     let tecla = evento.keyCode;
     let letra = String.fromCharCode(tecla);
@@ -84,9 +109,11 @@ function iniciarJuego() {
     document.getElementById("ahorcado_img").style.display = "flex"; //muestra el canvas
     document.getElementById("contenedor_ahorcado").style.display = "flex";
     document.addEventListener("keydown", teclado);
+   document.getElementById("teclado_alfabeto").style.display = "flex";
     escojepalabra()
     dibujaAhorcado()
     lineasAbajo()
+    reset_Tactil()
     contador = 7;
     incorrectas = [];
 }
@@ -99,6 +126,7 @@ function regresarInicio() {
     document.getElementById("text_Area").style.display = "none";
     document.getElementById("mesage_container").style.display = "none";
     document.getElementById("contenedor_ahorcado").style.display = "none";
+    document.getElementById("teclado_alfabeto").style.display = "none";
 
 
 }
@@ -113,6 +141,7 @@ function nuevoJuego() {
     escojepalabra()
     dibujaAhorcado()
     lineasAbajo()
+    reset_Tactil()
     contador = 7;
     incorrectas = [];
     correctas = [];
@@ -140,7 +169,7 @@ function perdiste() {
     document.getElementById("final_mesage").style.color = "red";
     document.getElementById("final_mesage").style.fontSize = "45px";
     document.getElementById("final_mesage_revelado").innerHTML = "La palabra era: " + palabrasecreta;
-
+    document.getElementById("teclado_alfabeto").style.display = "none";
 
 }
 
@@ -160,6 +189,7 @@ function ganaste() {
         document.getElementById("final_mesage").style.color = "green";
         document.getElementById("final_mesage").style.fontSize = "45px";
         document.getElementById("final_mesage_revelado").innerHTML = "";
+        document.getElementById("teclado_alfabeto").style.display = "none";
     }
 }
 
