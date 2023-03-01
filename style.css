@@ -232,6 +232,7 @@ body {
 
 .alfabeto {
   display: none;
+  justify-content: space-around;
   width: 70%;
   border-radius:22px ;
   border-color: rgba(10, 56, 113, 0.75);

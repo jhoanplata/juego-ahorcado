@@ -138,6 +138,8 @@ function nuevoJuego() {
     document.getElementById("ahorcado_img").style.display = "flex";
     document.getElementById("contenedor_ahorcado").style.display = "flex";
     document.getElementById("mesage_container").style.display = "none";
+    document.getElementById("teclado_alfabeto").style.display = "flex";
+
     escojepalabra()
     dibujaAhorcado()
     lineasAbajo()
